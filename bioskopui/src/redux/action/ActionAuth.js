@@ -4,9 +4,10 @@ export const LoginSuccessAction=(datauser)=>{
         payload:datauser
     }
 }
-// export const onRegisterSuccess=()=>{
-//     return{
-//         type:'REGISTER_SUCCESS',
-        
-//     }
-// }
+
+export const gantiPassword =(newpass)=>{
+    return {
+      type:'GANTI_PASSWORD',
+      payload:newpass
+    }
+  }

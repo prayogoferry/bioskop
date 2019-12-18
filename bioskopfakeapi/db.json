@@ -3,85 +3,154 @@
     {
       "id": 1,
       "username": "admin",
-      "password": "123"
+      "password": "admin",
+      "role": "admin"
     },
     {
       "id": 2,
       "username": "dobleh",
-      "password": "qwe"
+      "password": "asd",
+      "role": "user"
     },
     {
       "id": 3,
       "username": "jamal",
-      "password": "1234"
+      "password": "1234",
+      "role": "user"
+    },
+    {
+      "registrasiusername": "fakhran",
+      "registrasipassword": "1234",
+      "role": "user",
+      "id": 4
+    },
+    {
+      "username": "a",
+      "password": "a",
+      "role": "user",
+      "id": 5
+    },
+    {
+      "username": "asu",
+      "password": "123",
+      "role": "user",
+      "id": 6
+    },
+    {
+      "username": "kill",
+      "password": "90",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "username": "hendrianakharam",
+      "password": "123",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "username": "james1",
+      "password": "123",
+      "role": "user",
+      "id": 9
+    },
+    {
+      "username": "james",
+      "password": "123",
+      "role": "user",
+      "id": 10
     }
   ],
   "studios": [
     {
       "id": 1,
-      "nama": "Studio 1",
+      "nama": "studio 1",
       "jumlahKursi": 260
     },
     {
       "id": 2,
-      "nama": "Studio 2",
+      "nama": "studio 2",
       "jumlahKursi": 240
     },
     {
       "id": 3,
-      "nama": "Studio 3",
+      "nama": "studio 3",
       "jumlahKursi": 200
+    },
+    {
+      "nama": "eks",
+      "jumlahKursi": "240",
+      "id": 4
     }
   ],
   "movies": [
     {
-      "title": "Last Christmas",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157285280844221_287x421.jpg",
-      "sinopsis": "Kate (Emilia Clarke) adalah seorang wanita muda yang mengambil keputusan buruk. Kencan terakhirnya berakhir dengan bencana? Saat diterima di sebuah toko pernak-pernik natal dan berperan sebagai Peri ia bertemu dengan Tom (Henry Golding), Hidupnya berubah lagi. Bagi Kate, sepertinya terlalu bagus untuk menjadi kenyataan.",
-      "sutradara": "Paul Feig",
-      "genre": "Romance",
-      "durasi": "103",
-      "produksi": "RANS ENTERTAINMENT",
-      "jadwal": [
-        12
-      ],
-      "trailer": "https://www.youtube.com/embed/z9CEIcmWmtA",
-      "studioId": "1",
-      "id": 2
-    },
-    {
-      "title": "Darah Daging",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/15743293802147_287x421.jpg",
-      "sinopsis": "Seberapa besar pengorbanan yang bisa Anda berikan untuk menyelamatkan Ibu yang telah merawat Anda dari kecil? Pertanyaan tersebut dibuktikan ketiga bersaudara: ARYA (Ario Bayu), RAHMAT (Rangga Nattra) dan FIKRI (Arnold Leonard) dengan melakukan perampokan bank, mereka mengajak sahabat Rahmat dari kecil, SALIM (Donny Alamsyah) ikut serta pula BORNE (Tanta Ginting), Perampokan tersebut tidak berlangsung sesuai rencana dan mengakibatkan SALIM ditangkap dan dihukum.  12 tahun berlalu, SALIM yang dijatuhi hukuman mati kedatangan seorang penulis perempuan, HANNA (Estelle Linden) yang tertarik mengangkat kisah perampokan tersebut ke dalam sebuah novel.",
-      "sutradara": "bebas",
-      "genre": "horoor",
-      "durasi": "123",
+      "title": "Jumanji: The Next Level",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157380448937451_287x421.jpg",
+      "synopsys": "Dwayne Johnson, Karen Gillan, Jack Black dan Kevin Hart kembali ke Jumanji,keempatnya harus menyelamatkan salah satu teman mereka. Namun permainan telah berubah.Para pemain kini harus lebih berani melintasi rintangan ekstrem dan kembali dengan selamat dari permainan paling berbahaya di dunia.",
+      "sutradara": "Jake Kashdan",
+      "genre": "Action",
+      "durasi": "121",
       "produksi": "RANS ENTERTAINMENT",
       "jadwal": [
         12,
-        14,
+        16,
+        18,
         20
       ],
-      "trailer": "https://www.youtube.com/embed/XG__1TjYjI4",
-      "studioId": "1",
-      "id": 3
+      "trailer": "https://www.youtube.com/embed/rBxcF-r9Ibs",
+      "studioId": "3",
+      "id": 1
     },
     {
-      "title": "Jumanji: The Next Level",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157422945871583_287x421.jpg",
-      "sinopsis": "Dwayne Johnson, Karen Gillan, Jack Black dan Kevin Hart kembali ke Jumanji, keempatnya harus menyelamatkan salah satu teman mereka. Namun permainan telah berubah. Para pemain kini harus lebih berani melintasi rintangan ekstrem dan kembali dengan selamat dari permainan paling berbahaya di dunia.",
-      "sutradara": "bobi",
-      "genre": "adventure",
-      "durasi": "123",
-      "produksi": "RANS ENTERTAINMENT",
+      "id": 3,
+      "title": "Ip Man 4: The Finale",
+      "sutradara": "Wilson Yip",
+      "durasi": 121,
+      "jadwal": [
+        9,
+        12,
+        16
+      ],
+      "synopsys": "Ip Man (Donnie Yen) datang ke Amerika Serikat untuk membantu muridnya, Bruce Lee (Kwok-Kwan Chan) yang mendapat diskriminasi rasial karena membuka sekolah seni bela diri Wing Chun di negeri Paman Sam tersebut.",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157492651970791_287x421.jpg",
+      "genre": "Action",
+      "studioId": "2",
+      "trailer": "https://www.youtube.com/embed/otI4pyQjb8w",
+      "produksi": "Bullet Films, Mandarin Motion Pictures, Shanghai B"
+    },
+    {
+      "title": "Doraemon the Movie: Nobita's Treasure ",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157503171275932_287x421.jpg",
+      "synopsys": "Dalam kisah Doraemon kali ini, bersama Nobita, Shizuka, Gian, dan Suneo mereka memulai petualangan di Laut Karibia. Nobita adalah kapten kapal dan bertarung melawan musuhnya di atas kapal.\n\nSaat Shizuka diculik, dan badai menghambat perjalanan mereka. Mini-Dora membantu Nobita dan teman-teman. Dalam petualangan kali ini mereka menemukan sebuah pulau harta karun. Namun belakangan mereka menyadari itu bukanlah pulau biasa.",
+      "sutradara": "Kazuaki Imai",
+      "genre": "Fantasy",
+      "durasi": "120",
       "jadwal": [
         12,
         14,
         16
       ],
-      "trailer": "https://www.youtube.com/embed/rBxcF-r9Ibs",
+      "produksi": "Shin Ei Animation",
+      "trailer": "https://www.youtube.com/embed/4TXbUvMHijc",
       "studioId": "1",
       "id": 4
+    },
+    {
+      "title": "Koe No Katachi",
+      "image": "data:image/jpeg;base64,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",
+      "synopsys": "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. However, when her mother notifies the school, he is singled out and blamed for everything done to her. With Shouko transferring out of the school, Shouya is left at the mercy of his classmates. He is heartlessly ostracized all throughout elementary and middle school, while teachers turn a blind eye.  Now in his third year of high school, Shouya is still plagued by his wrongdoings as a young boy. Sincerely regretting his past actions, he sets out on a journey of redemption: to meet Shouko once more and make amends.  Koe no Katachi tells the heartwarming tale of Shouya's reunion with Shouko and his honest attempts to redeem himself, all while being continually haunted by the shadows of his past.",
+      "sutradara": " Shochiku",
+      "genre": "Drama",
+      "durasi": "130",
+      "produksi": "RANS ENTERTAINMENT",
+      "jadwal": [
+        12,
+        16
+      ],
+      "trailer": "https://www.youtube.com/watch?v=nfK6UgLra7g",
+      "studioId": "1",
+      "id": 5
     }
   ],
   "orders": [
@@ -90,14 +159,14 @@
       "userId": 2,
       "movieId": 3,
       "jadwal": 12,
-      "totalHarga": 50000,
+      "totalharga": 50000,
       "bayar": false
     },
     {
       "userId": 3,
       "movieId": 3,
       "jadwal": 12,
-      "totalHarga": 50000,
+      "totalharga": 50000,
       "id": 2,
       "bayar": false
     },
@@ -105,9 +174,297 @@
       "userId": 2,
       "movieId": 3,
       "jadwal": 14,
-      "totalHarga": 50000,
+      "totalharga": 5000,
       "id": 3,
       "bayar": false
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 100000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 200000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 14
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 16
+    },
+    {
+      "userId": 8,
+      "movieId": 1,
+      "totalharga": 100000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 17
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 18
+    },
+    {
+      "userId": 3,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 19
+    },
+    {
+      "userId": 3,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 20
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 22
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 75000,
+      "jadwal": 16,
+      "bayar": false,
+      "id": 23
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "totalharga": 50000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 24
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 25
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 26
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 27
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 28
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 29
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 30
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 31
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 32
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 33
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 34
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 35
+    },
+    {
+      "userId": 2,
+      "movieId": 4,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 36
+    },
+    {
+      "userId": 10,
+      "movieId": 1,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 37
+    },
+    {
+      "userId": 2,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 38
+    },
+    {
+      "userId": 3,
+      "movieId": 5,
+      "totalharga": 150000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 39
     }
   ],
   "ordersDetails": [
@@ -146,6 +503,390 @@
       "orderId": 3,
       "row": 2,
       "seat": 9
+    },
+    {
+      "orderId": 4,
+      "seat": 6,
+      "row": 0,
+      "id": 7
+    },
+    {
+      "orderId": 4,
+      "seat": 7,
+      "row": 0,
+      "id": 8
+    },
+    {
+      "orderId": 4,
+      "seat": 9,
+      "row": 0,
+      "id": 9
+    },
+    {
+      "orderId": 4,
+      "seat": 8,
+      "row": 0,
+      "id": 10
+    },
+    {
+      "orderId": 5,
+      "seat": 8,
+      "row": 2,
+      "id": 11
+    },
+    {
+      "orderId": 6,
+      "seat": 9,
+      "row": 2,
+      "id": 12
+    },
+    {
+      "orderId": 7,
+      "seat": 7,
+      "row": 1,
+      "id": 13
+    },
+    {
+      "orderId": 8,
+      "seat": 9,
+      "row": 1,
+      "id": 14
+    },
+    {
+      "orderId": 9,
+      "seat": 12,
+      "row": 1,
+      "id": 15
+    },
+    {
+      "orderId": 9,
+      "seat": 9,
+      "row": 3,
+      "id": 16
+    },
+    {
+      "orderId": 10,
+      "seat": 10,
+      "row": 2,
+      "id": 17
+    },
+    {
+      "orderId": 11,
+      "seat": 11,
+      "row": 4,
+      "id": 18
+    },
+    {
+      "orderId": 11,
+      "seat": 12,
+      "row": 2,
+      "id": 19
+    },
+    {
+      "orderId": 11,
+      "seat": 6,
+      "row": 6,
+      "id": 20
+    },
+    {
+      "orderId": 11,
+      "seat": 13,
+      "row": 2,
+      "id": 21
+    },
+    {
+      "orderId": 11,
+      "seat": 12,
+      "row": 7,
+      "id": 22
+    },
+    {
+      "orderId": 11,
+      "seat": 7,
+      "row": 6,
+      "id": 23
+    },
+    {
+      "orderId": 11,
+      "seat": 15,
+      "row": 3,
+      "id": 24
+    },
+    {
+      "orderId": 11,
+      "seat": 15,
+      "row": 5,
+      "id": 25
+    },
+    {
+      "orderId": 12,
+      "seat": 4,
+      "row": 3,
+      "id": 26
+    },
+    {
+      "orderId": 12,
+      "seat": 6,
+      "row": 4,
+      "id": 27
+    },
+    {
+      "orderId": 13,
+      "seat": 7,
+      "row": 0,
+      "id": 28
+    },
+    {
+      "orderId": 13,
+      "seat": 8,
+      "row": 0,
+      "id": 29
+    },
+    {
+      "orderId": 14,
+      "seat": 9,
+      "row": 0,
+      "id": 30
+    },
+    {
+      "orderId": 14,
+      "seat": 10,
+      "row": 0,
+      "id": 31
+    },
+    {
+      "orderId": 15,
+      "seat": 11,
+      "row": 0,
+      "id": 32
+    },
+    {
+      "orderId": 16,
+      "seat": 12,
+      "row": 0,
+      "id": 33
+    },
+    {
+      "orderId": 17,
+      "seat": 9,
+      "row": 4,
+      "id": 34
+    },
+    {
+      "orderId": 17,
+      "seat": 9,
+      "row": 5,
+      "id": 35
+    },
+    {
+      "orderId": 17,
+      "seat": 9,
+      "row": 6,
+      "id": 36
+    },
+    {
+      "orderId": 17,
+      "seat": 9,
+      "row": 7,
+      "id": 37
+    },
+    {
+      "orderId": 18,
+      "seat": 9,
+      "row": 1,
+      "id": 38
+    },
+    {
+      "orderId": 18,
+      "seat": 10,
+      "row": 1,
+      "id": 39
+    },
+    {
+      "orderId": 19,
+      "seat": 9,
+      "row": 1,
+      "id": 40
+    },
+    {
+      "orderId": 20,
+      "seat": 10,
+      "row": 1,
+      "id": 41
+    },
+    {
+      "orderId": 21,
+      "seat": 9,
+      "row": 2,
+      "id": 42
+    },
+    {
+      "orderId": 21,
+      "seat": 10,
+      "row": 2,
+      "id": 43
+    },
+    {
+      "orderId": 22,
+      "seat": 10,
+      "row": 0,
+      "id": 44
+    },
+    {
+      "orderId": 23,
+      "seat": 11,
+      "row": 0,
+      "id": 45
+    },
+    {
+      "orderId": 23,
+      "seat": 9,
+      "row": 1,
+      "id": 46
+    },
+    {
+      "orderId": 23,
+      "seat": 9,
+      "row": 2,
+      "id": 47
+    },
+    {
+      "orderId": 24,
+      "seat": 13,
+      "row": 8,
+      "id": 48
+    },
+    {
+      "orderId": 24,
+      "seat": 14,
+      "row": 8,
+      "id": 49
+    },
+    {
+      "orderId": 25,
+      "seat": 11,
+      "row": 1,
+      "id": 50
+    },
+    {
+      "orderId": 26,
+      "seat": 13,
+      "row": 1,
+      "id": 51
+    },
+    {
+      "orderId": 27,
+      "seat": 7,
+      "row": 4,
+      "id": 52
+    },
+    {
+      "orderId": 28,
+      "seat": 0,
+      "row": 0,
+      "id": 53
+    },
+    {
+      "orderId": 29,
+      "seat": 12,
+      "row": 1,
+      "id": 54
+    },
+    {
+      "orderId": 30,
+      "seat": 10,
+      "row": 0,
+      "id": 55
+    },
+    {
+      "orderId": 31,
+      "seat": 13,
+      "row": 0,
+      "id": 56
+    },
+    {
+      "orderId": 32,
+      "seat": 9,
+      "row": 2,
+      "id": 57
+    },
+    {
+      "orderId": 33,
+      "seat": 7,
+      "row": 2,
+      "id": 58
+    },
+    {
+      "orderId": 34,
+      "seat": 12,
+      "row": 3,
+      "id": 59
+    },
+    {
+      "orderId": 35,
+      "seat": 11,
+      "row": 2,
+      "id": 60
+    },
+    {
+      "orderId": 36,
+      "seat": 12,
+      "row": 2,
+      "id": 61
+    },
+    {
+      "orderId": 37,
+      "seat": 17,
+      "row": 2,
+      "id": 62
+    },
+    {
+      "orderId": 38,
+      "seat": 12,
+      "row": 5,
+      "id": 63
+    },
+    {
+      "orderId": 39,
+      "seat": 9,
+      "row": 1,
+      "id": 64
+    },
+    {
+      "orderId": 39,
+      "seat": 10,
+      "row": 1,
+      "id": 65
+    },
+    {
+      "orderId": 39,
+      "seat": 9,
+      "row": 0,
+      "id": 66
+    },
+    {
+      "orderId": 39,
+      "seat": 7,
+      "row": 0,
+      "id": 67
+    },
+    {
+      "orderId": 39,
+      "seat": 11,
+      "row": 2,
+      "id": 68
+    },
+    {
+      "orderId": 39,
+      "seat": 12,
+      "row": 2,
+      "id": 69
     }
+  ],
+  "transaction": [
+    {}
+  ],
+  "transactionsDetails": [
+    {}
   ]
 }

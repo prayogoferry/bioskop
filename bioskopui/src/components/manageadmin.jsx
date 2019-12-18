@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Axios from 'axios'
-import {Table,TableBody,TableHead,TableCell,TableRow} from '@material-ui/core'
-import { APIURL } from '../support/ApiUrl';
-import {Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap'
-import Fade from 'react-reveal/Fade'
-import {Route,Link,Switch} from 'react-router-dom'
+import { Table,Button,Modal,ModalBody,ModalFooter, ModalHeader } from 'reactstrap';
+import Axios from 'axios';
+import {url} from './url'
+import {Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 
-
-
-class ManageAdmin extends Component {
+class Dashboaradmin extends Component {
     state = { 
         datafilm:[],
         readmoreselected:-1,
@@ -17,21 +14,30 @@ class ManageAdmin extends Component {
         modaledit:false,
         indexedit:0,
         jadwal:[12,14,16,18,20,22]
-    }
-
-    componentDidMount(){//
-        Axios.get(`${APIURL}movies`)
+     } 
+     
+    
+     componentDidMount(){
+        Axios.get(`${url}movies`)
         .then((res)=>{
-            // console.log(res.data)
-            this.setState({datafilm:res.data})
-        }).catch((err)=>{
+            Axios.get(`${url}studios`)
+            .then((res1)=>{
+
+                this.setState({datafilm:res.data, datastudio:res1.data})
+            })
+        })
+        .catch((err)=>{
             console.log(err)
         })
     }
+
+
+
+
     onUpdateDataclick=()=>{
         var jadwaltemplate=this.state.jadwal
         var jadwal=[]
-        var id=this.state.datafilm[this.state.indexedit].id//menyimpan jadwal data ke db
+        var id=this.state.datafilm[this.state.indexedit].id
         for(var i=0;i<jadwaltemplate.length;i++){
             if(this.refs[`editjadwal${i}`].checked){
                 jadwal.push(jadwaltemplate[i])
@@ -40,7 +46,7 @@ class ManageAdmin extends Component {
         var iniref=this.refs
         var title=iniref.edittitle.value
         var image=iniref.editimage.value
-        var sinopsis=iniref.editsinopsis.value
+        var synopsys=iniref.editsinopsis.value
         var sutradara=iniref.editsutradara.value
         var genre=iniref.editgenre.value
         var durasi=iniref.editdurasi.value
@@ -50,7 +56,7 @@ class ManageAdmin extends Component {
         var data={
             title:title,
             image,
-            sinopsis,
+            synopsys,
             sutradara,
             genre,
             durasi,
@@ -60,9 +66,9 @@ class ManageAdmin extends Component {
             studioId
         }
         console.log(id)
-        Axios.put(`${APIURL}movies/${id}`,data)
+        Axios.put(`${url}movies/${id}`,data)
         .then(()=>{
-            Axios.get(`${APIURL}movies/`)
+            Axios.get(`${url}movies/`)
             .then((res)=>{
                 this.setState({datafilm:res.data,modaledit:false})
             })
@@ -73,6 +79,11 @@ class ManageAdmin extends Component {
             console.log(err)
         })
     }
+
+    onDeleteClick=()=>{
+        
+    }
+
     onSaveAddDataClick=()=>{
         var jadwaltemplate=[12,14,16,18,20]
         var jadwal=[]
@@ -84,7 +95,7 @@ class ManageAdmin extends Component {
         var iniref=this.refs
         var title=iniref.title.value
         var image=iniref.image.value
-        var sinopsis=iniref.sinopsis.value
+        var synopsys=iniref.synopsys.value
         var sutradara=iniref.sutradara.value
         var genre=iniref.genre.value
         var durasi=iniref.durasi.value
@@ -94,7 +105,7 @@ class ManageAdmin extends Component {
         var data={
             title:title,
             image,
-            sinopsis,
+            synopsys,
             sutradara,
             genre,
             durasi,
@@ -103,9 +114,9 @@ class ManageAdmin extends Component {
             trailer,
             studioId
         }
-        Axios.post(`${APIURL}movies`,data)
+        Axios.post(`${url}movies`,data)
         .then(()=>{
-            Axios.get(`${APIURL}movies`)
+            Axios.get(`${url}movies`)
             .then((res)=>{
                 this.setState({datafilm:res.data,modaladd:false})
             })
@@ -117,42 +128,28 @@ class ManageAdmin extends Component {
         })
     }
 
-    renderMovies=()=>{
-        return this.state.datafilm.map((val,index)=>{
-            return(
-                <TableRow key={index}>
-                    <TableCell>{index+1}</TableCell>
-                    <TableCell>{val.title}</TableCell>
-                    <TableCell><img src={val.image} alt={'gambar'} height='200px'/></TableCell>
-                    {   this.state.readmoreselected===index?
-                            <TableCell style={{width:'300px'}}>
-                                {val.sinopsis} 
-                                <span style={{color:'red'}} onClick={()=>this.setState({readmoreselected:-1})}>
-                                    Read less
-                                </span>
-                            </TableCell>
-                        :
-                        <TableCell style={{width:'300px'}}>
-                            {val.sinopsis.split('').filter((val,index)=>index<=50)}
-                            <span style={{color:'red'}} onClick={()=>this.setState({readmoreselected:index})}>
-                                Read More
-                            </span>
-                        </TableCell>
-                    }
-                    <TableCell>{val.jadwal}</TableCell>
-                    <TableCell>{val.sutradara}</TableCell>
-                    <TableCell>{val.genre}</TableCell>
-                    <TableCell>{val.durasi}</TableCell>
-                    <TableCell>
-                        <button className='btn btn-outline-primary mr-3' onClick={()=>this.setState({modaledit:true,indexedit:index})}>Edit</button>
-                        <button className='btn btn-outline-danger'>Delete</button>
-                    </TableCell>
-                </TableRow>
-            )
-        })
-    }
+     renderMovies=()=>{
+         return this.state.datafilm.map((val,index)=>{
+             return (
 
-    renderEditCheckbox=(indexedit)=>{
+                     <tr>
+                        <th>{index+1}</th>
+                        <th>{val.title}</th>
+                        <th><img src={val.image} height='150px' alt="..." /></th>
+                        <th>{val.synopsys}</th>
+                        <th>{val.sutradara}</th>
+                        <th>{val.genre}</th>
+                        <th>{val.durasi}</th>
+                        <th>
+                        <Button color="primary" onClick={()=>this.setState({modaledit:true,indexedit:index})}>edit</Button>{' '}
+                        <Button color="secondary">delete</Button>{' '}
+                        </th>
+                        </tr>
+             )
+         })
+     }
+
+     renderEditCheckbox=(indexedit)=>{
         var indexarr=[]
         var datafilmedit=this.state.datafilm[indexedit].jadwal
         console.log(datafilmedit)
@@ -195,7 +192,7 @@ class ManageAdmin extends Component {
         })
     }
 
-    renderAddCheckbox=()=>{
+     renderAddCheckbox=()=>{
         return this.state.jadwal.map((val,index)=>{
             return(
                 <div key={index}>
@@ -205,31 +202,50 @@ class ManageAdmin extends Component {
             )
         })
     }
-    render() {
-        const {datafilm,indexedit}=this.state// data film& indexedit dijadikan state
+
+
+
+
+
+    render() { 
+        const {datafilm,indexedit}=this.state
         const {length}=datafilm
+        
+        if(this.props.roleUser==='user'){
+            return <Redirect to='/notfound'/>
+        }
         if(length===0){
             return <div>loading</div>
         }
-        return (
-            <div className='mx-3'>
-                <Modal isOpen={this.state.modaledit} toggle={()=>this.setState({modaledit:false})}>
+
+        if(this.props.UserId){
+            
+        
+        return ( 
+            <div>
+            
+
+            <Modal isOpen={this.state.modaledit} toggle={()=>this.setState({modaledit:false})}>
                     <ModalHeader>
                         Edit Data {datafilm[indexedit].title}
                     </ModalHeader>
                     <ModalBody>
                         <input type="text" defaultValue={datafilm[indexedit].title} ref='edittitle'  placeholder='title' className='form-control mt-2'/>
                         <input type="text" defaultValue={datafilm[indexedit].image} ref='editimage' placeholder='image'className='form-control mt-2'/>
-                        <textarea rows='5' ref='editsinopsis' defaultValue={datafilm[indexedit].sinopsis} placeholder='sinopsis' className='form-control mt-2 mb-2'/>
+                        <textarea rows='5' ref='editsinopsis' defaultValue={datafilm[indexedit].synopsys} placeholder='sinopsis' className='form-control mt-2 mb-2'/>
                         Jadwal:
                         <div className="d-flex">
                             {this.renderEditCheckbox(indexedit)}
                         </div>
                         <input type="text" defaultValue={datafilm[indexedit].trailer} ref='edittrailer' placeholder='trailer'className='form-control mt-2' />
                         <select ref='editstudio' className='form-control mt-2'>
-                            <option value="1">Studio 1</option>    
-                            <option value="2">Studio 2</option>    
-                            <option value="3">Studio 3</option>    
+                                    {
+                                this.state.datastudio.map((val)=>{
+                                    return(
+                                        <option value={val.id}>{val.nama}</option>
+                                    )
+                                })
+                            }   
                         </select> 
                         <input type="text" defaultValue={datafilm[indexedit].sutradara}  ref='editsutradara' placeholder='sutradara' className='form-control mt-2'/>
                         <input type="number" defaultValue={datafilm[indexedit].durasi}  ref='editdurasi' placeholder='durasi' className='form-control mt-2'/>
@@ -243,6 +259,8 @@ class ManageAdmin extends Component {
 
 
 
+                
+
                 <Modal isOpen={this.state.modaladd} toggle={()=>this.setState({modaladd:false})}>
                     <ModalHeader>
                         Add Data
@@ -250,16 +268,20 @@ class ManageAdmin extends Component {
                     <ModalBody>
                         <input type="text" ref='title'  placeholder='title' className='form-control mt-2'/>
                         <input type="text" ref='image' placeholder='image'className='form-control mt-2'/>
-                        <input type="text" ref='sinopsis'  placeholder='sinopsis' className='form-control mt-2 mb-2'/>
+                        <input type="text" ref='synopsys'  placeholder='sinopsis' className='form-control mt-2 mb-2'/>
                         Jadwal:
                         <div className="d-flex">
                             {this.renderAddCheckbox()}
                         </div>
                         <input type="text" ref='trailer' placeholder='trailer'className='form-control mt-2' />
                         <select ref='studio' className='form-control mt-2'>
-                            <option value="1">Studio 1</option>    
-                            <option value="2">Studio 2</option>    
-                            <option value="3">Studio 3</option>    
+                        {
+                             this.state.datastudio.map((val)=>{
+                                return(
+                              <option value={val.id}>{val.nama}</option>
+                              )
+                                })
+                           }    
                         </select> 
                         <input type="text"  ref='sutradara' placeholder='sutradara' className='form-control mt-2'/>
                         <input type="number"  ref='durasi' placeholder='durasi' className='form-control mt-2'/>
@@ -271,68 +293,41 @@ class ManageAdmin extends Component {
                     </ModalFooter>
                 </Modal>
 
+                <center>
+                <Button color="primary" onClick={()=>this.setState({modaladd:true})}>AddDAta</Button>
+                </center>
 
-                <Fade>
-                    {/* tampilan film atart*/}
-                    <Table size='small' >
-                        <TableHead>
-                            <TableRow>
-                                <TableCell colSpan='10' style={{textAlign:"right"}}>
-                                    <input className='mr-4 ' type="text" placeholder='Cari Film'/>
-                                    <button className='btn btn-success' onClick={()=>this.setState({modaladd:true})}> add Data</button>
-                                </TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>No.</TableCell>
-                                <TableCell>Judul</TableCell>
-                                <TableCell>Image</TableCell>
-                                <TableCell>Sinopsis</TableCell>
-                                <TableCell>Jadwal</TableCell>
-                                <TableCell>Sutradara</TableCell>
-                                <TableCell>Genre</TableCell>
-                                <TableCell>Durasi</TableCell>
-                                <TableCell>Action</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {this.renderMovies()}
-                        </TableBody>
-                    </Table>
-                </Fade>
-                <div>
-                    <Link to='/manageadmin/test'>test2</Link>
-                </div>
-                <div>
-                    
-                        <Switch>
-                            <Route to='/manageadmin' component={test} exact />
-                            <Route to='/manageadmin/:test' component={test2}/>
-                        </Switch>
-                    
-                </div>
+                <Table size="sm">
+                    <thead>
+                        <tr>
+                        <th>No.</th>
+                        <th>Judul</th>
+                        <th>Image</th>
+                        <th>Sinopsis</th>
+                        <th>Sutradara</th>
+                        <th>Genre</th>
+                        <th>Durasi</th>
+                        <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.renderMovies()}
+                    </tbody>    
+                </Table>
             </div>
-        );
+         );
+        }
+        return <Redirect to='/notfound'/>
     }
 }
-class test extends Component {
-    state = {  }
-    render() { 
-        return (
-            <div>
-                test1
-            </div>
-          );
-    }
-}
-class test2 extends Component {
-    state = {  }
-    render() { 
-        return (
-            <div>
-                {this.props.match.params}
-            </div>
-          );
+
+const MapstateToprops=(state)=>{
+    return {
+    Auth:state.Auth,
+    roleUser:state.Auth.role,
+    UserId:state.Auth.id
     }
 }
  
-export default ManageAdmin;
+export default connect(MapstateToprops)(Dashboaradmin);
+

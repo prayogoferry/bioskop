@@ -17,14 +17,14 @@ import {connect} from 'react-redux'
 import {FaCartArrowDown} from 'react-icons/fa'
 
 
-const Header = (props) => {
+const Headernotfound = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="dark" light expand="md">
         <NavbarBrand href="/">BioskopAmbyar</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -101,4 +101,4 @@ const MapstateToprops=(state)=>{
   }
 }
 
-export default connect (MapstateToprops) (Header);
+export default connect (MapstateToprops) (Headernotfound);

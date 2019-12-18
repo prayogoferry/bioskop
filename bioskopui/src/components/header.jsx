@@ -24,15 +24,15 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">BioskopAmbyar</NavbarBrand>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">CINEMA</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto"  navbar>
             {props.roleUser==='admin'?
             
-            <NavItem className='jancoknav'>
-              <NavLink href="/admin/">Manage Admin</NavLink>
+            <NavItem>
+              <NavLink href="/admin/">Manage Movie</NavLink>
               <NavLink href="/managestudio/">Manage Studio</NavLink>
             </NavItem>
             :
@@ -41,8 +41,8 @@ const Header = (props) => {
 
               {props.roleUser==='user'?
               
-              <NavItem className='jancoknav'>
-                <NavLink href="/history/">history</NavLink>
+              <NavItem >
+               
               <NavLink href="/cart/"><FaCartArrowDown/>: {props.carts}</NavLink>
             </NavItem>
             
@@ -52,7 +52,7 @@ const Header = (props) => {
             {props.namauser===''?
             
              
-                <NavItem className='jancoknav'> 
+                <NavItem > 
               <NavLink href="/register/">Register</NavLink>
     
                 <NavLink href="/login">Login</NavLink>
@@ -71,6 +71,9 @@ const Header = (props) => {
                 {props.namauser}
               </DropdownToggle>
               <DropdownMenu right>
+              <DropdownItem href="/history/">
+                  History
+                </DropdownItem>
                 <DropdownItem href='/setting'>
                   Setting
                 </DropdownItem>

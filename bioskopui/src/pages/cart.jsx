@@ -10,9 +10,11 @@ class Cart extends Component {
     state = {
         datacart:[],
         modaldetail:false,
-        indexdetail:0
-        
+        indexdetail:0,
+        modalhistori:false,
+        bayar:false
     }
+
 
     componentDidMount(){
         Axios.get(`${url}orders?_expand=movie&userId=${this.props.UserId}&bayar=false`)
@@ -56,6 +58,15 @@ class Cart extends Component {
         return total
     }
 
+    // onCheckout=(index)=>{
+    //     this.setState({bayar:true})
+    //     datacart.push({bayar})
+    //     Axios.post(`${url}transaction`, datacart)
+    //     .then((res)=>{
+
+    //     })
+        
+    // }
 
 
     renderCart=()=>{
@@ -76,14 +87,12 @@ class Cart extends Component {
                         <td style={{width:100}}>
 
                         <ButtonGroup>
-                        <Button onClick={()=>this.setState({modaldetail:true,indexdetail:index})}>Detail</Button>
-                         <Button>Middle</Button>
-                         <Button>Right</Button>
+                        <Button color='primary'  onClick={()=>this.setState({modaldetail:true,indexdetail:index})}>Detail</Button>
+                         <Button color='secondary'>CheckOut</Button>
+                         <Button color='danger'>Cancel</Button>
                         </ButtonGroup>
 
-                            {/* <Button onClick={()=>this.setState({modaldetail:true,indexdetail:index})} variant='info'>Details</Button>
-                            <Button variant='info'>Checkout</Button>
-                            <Button variant='danger'>cancel</Button> */}
+                           
                             </td>
                         
                     </tr>
@@ -94,6 +103,8 @@ class Cart extends Component {
     render() {
         if(this.props.UserId){
             return (
+
+                // modaldetailstart
                 <div>
                     <Modal isOpen={this.state.modaldetail} toggle={() => {  this.setState({ modaldetail: false }); }}>
                 
@@ -108,7 +119,7 @@ class Cart extends Component {
                     </tbody>
 
                     <tbody>
-                      {this.state.datacart !== null && this.state.datacart.length !== 0
+                      {this.state.datacart !== null && this.state.datacart.length !== 0//data bukan null dan panjang data bukan 0
                         ? this.state.datacart[this.state.indexdetail].qty.map((val, index) => {
                             return (
                               <tr key={index}>
@@ -124,13 +135,18 @@ class Cart extends Component {
                 </ModalBody>
               </Modal>
 
+              {/* modalhistoristart */}
+
+              {/* <Modal isOpen={this.state.modaladd} toggle={()=>this.setState({modaladd:false})}> */}
+
+
 
                     <center style={{marginBottom:'450px'}}>
                         <Table style={{width:1000}} >
                             <thead>
                                 <tr>
                                     <th style={{width:100}}>No.</th>
-                                    <th style={{width:300}}>Title</th>
+                                    <th style={{width:100}}>Title</th>
                                     <th style={{width:100}}>Jadwal</th>
                                     <th style={{width:100}}>Jumlah</th>
                                     <th style={{width:100}}>Total Harga</th>

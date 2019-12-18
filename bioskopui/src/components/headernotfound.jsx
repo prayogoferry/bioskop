@@ -24,14 +24,14 @@ const Headernotfound = (props) => {
 
   return (
     <div>
-      <Navbar color="dark" light expand="md">
+      <Navbar color="dark" dark expand="md">
         <NavbarBrand href="/">BioskopAmbyar</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto"  navbar>
             {props.roleUser==='admin'?
             
-            <NavItem className='jancoknav'>
+            <NavItem >
               <NavLink href="/admin/">Manage Admin</NavLink>
               <NavLink href="/managestudio/">Manage Studio</NavLink>
             </NavItem>
@@ -41,7 +41,7 @@ const Headernotfound = (props) => {
 
               {props.roleUser==='user'?
               
-              <NavItem className='jancoknav'>
+              <NavItem>
                 <NavLink href="/history/">history</NavLink>
               <NavLink href="/cart/"><FaCartArrowDown/>: {props.carts}</NavLink>
             </NavItem>
@@ -52,7 +52,7 @@ const Headernotfound = (props) => {
             {props.namauser===''?
             
              
-                <NavItem className='jancoknav'> 
+                <NavItem> 
               <NavLink href="/register/">Register</NavLink>
     
                 <NavLink href="/login">Login</NavLink>

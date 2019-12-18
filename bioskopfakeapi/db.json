@@ -59,6 +59,12 @@
       "password": "123",
       "role": "user",
       "id": 10
+    },
+    {
+      "username": "bagol",
+      "password": "qwerty",
+      "role": "user",
+      "id": 11
     }
   ],
   "studios": [
@@ -465,6 +471,14 @@
       "jadwal": 12,
       "bayar": false,
       "id": 39
+    },
+    {
+      "userId": 11,
+      "movieId": 3,
+      "totalharga": 25000,
+      "jadwal": 12,
+      "bayar": false,
+      "id": 40
     }
   ],
   "ordersDetails": [
@@ -881,6 +895,12 @@
       "seat": 12,
       "row": 2,
       "id": 69
+    },
+    {
+      "orderId": 40,
+      "seat": 9,
+      "row": 3,
+      "id": 70
     }
   ],
   "transaction": [

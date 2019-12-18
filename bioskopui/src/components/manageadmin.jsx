@@ -80,7 +80,8 @@ class Dashboaradmin extends Component {
         })
     }
 
-    onDeleteClick=()=>{
+    btnDeleteonClick=(index , i,title)=>{
+        this.setState({deletetittle:title,deleteid:index,deleteindex:i,modaldelete:true})
         
     }
 
@@ -135,7 +136,7 @@ class Dashboaradmin extends Component {
                      <tr>
                         <th>{index+1}</th>
                         <th>{val.title}</th>
-                        <th><img src={val.image} height='150px' alt="..." /></th>
+                        <th><img src={val.image} height='100px' alt="..." /></th>
                         <th>{val.synopsys}</th>
                         <th>{val.sutradara}</th>
                         <th>{val.genre}</th>
@@ -224,6 +225,7 @@ class Dashboaradmin extends Component {
         return ( 
             <div>
             
+            {/* modal edit start */}
 
             <Modal isOpen={this.state.modaledit} toggle={()=>this.setState({modaledit:false})}>
                     <ModalHeader>
@@ -258,7 +260,7 @@ class Dashboaradmin extends Component {
                 </Modal>
 
 
-
+                            {/* modal tambah start */}
                 
 
                 <Modal isOpen={this.state.modaladd} toggle={()=>this.setState({modaladd:false})}>

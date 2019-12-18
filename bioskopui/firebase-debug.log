@@ -1,0 +1,21 @@
+[debug] [2019-12-18T09:52:25.829Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T09:52:25.837Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pavilion\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-12-18T09:52:25.837Z] CLI Version:   7.8.1
+[debug] [2019-12-18T09:52:25.838Z] Platform:      win32
+[debug] [2019-12-18T09:52:25.838Z] Node Version:  v10.16.3
+[debug] [2019-12-18T09:52:25.840Z] Time:          Wed Dec 18 2019 16:52:25 GMT+0700 (Western Indonesia Time)
+[debug] [2019-12-18T09:52:25.841Z] ----------------------------------------------------------------------
+[debug] [2019-12-18T09:52:25.841Z] 
+[debug] [2019-12-18T09:52:25.921Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-18T09:52:25.924Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  d:\front-end\New folder (2)\bioskop\bioskopui
+

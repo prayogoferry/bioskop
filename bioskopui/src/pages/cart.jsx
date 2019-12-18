@@ -62,9 +62,9 @@ class Cart extends Component {
     //     this.setState({bayar:true})
     //     datacart.push({bayar})
     //     Axios.post(`${url}transaction`, datacart)
-    //     .then((res)=>{
+    //     .then Axios.delete(`${url}orders?_expand=movie&userId=${this.props.UserId}&bayar=false`)
 
-    //     })
+    // 
         
     // }
 

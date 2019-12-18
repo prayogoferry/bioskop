@@ -52,7 +52,7 @@ class Login extends Component {
                                 </div>
                         
                                 }
-                    <button onClick={this.onLoginClick} >login</button>
+                    <button className='btn btn-primary' onClick={this.onLoginClick} >login</button>
                     <p className="message">Not registered? <a href="/register">Create an account</a></p>
                     </form>
                 </div>
